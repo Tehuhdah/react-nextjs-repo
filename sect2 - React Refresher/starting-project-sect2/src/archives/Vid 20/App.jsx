@@ -13,13 +13,12 @@ function App() {
 
   return (
     <main>
-      {/* Render the Post component with author and body props. */}
-      {/* The Post component will receive these props and render them. */}
+      {/*  You must have 1 root element for sibling elements. <main> or empty <> */}
+      {/* You can render your components with self closign brackets or in traditional html style. */}
       <Post author="Jhordan" body="React.js is Awesome!"></Post>
       <Post author="Angelo" body="Check out the full course!"></Post>
       <Post author="Tejada" body="Its on a crazy discount right now!" />
-      {/* Render the Post component without any props. */}
-      {/* Since no props are passed, the Post component will render with undefined props. */}
+      <Post />
     </main>
   );
 }
