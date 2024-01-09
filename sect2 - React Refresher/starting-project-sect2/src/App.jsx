@@ -9,8 +9,18 @@ function App() {
   // The component returns a JSX expression.
   // JSX is a syntax extension for JavaScript, which looks similar to HTML.
   // It gets compiled to React.createElement() calls which return React elements.
-  // In this case, we are returning the Post component.
-  return <Post />;
+  // In this case, we are returning the Post component. They can also be reused.
+
+  return (
+    <main>
+      {/*  You must have 1 root element for sibling elements. <main> or empty <> */}
+      {/* You can render your components with self closign brackets or in traditional html style. */}
+      <Post></Post>
+      <Post></Post>
+      <Post />
+      <Post />
+    </main>
+  );
 }
 
 // Export the App component as the default export.
