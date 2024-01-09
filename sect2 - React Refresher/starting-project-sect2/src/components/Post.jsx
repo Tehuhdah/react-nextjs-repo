@@ -9,11 +9,11 @@ function Post(props) {
     // <div style={{ color: "black" }}> - Styling from within the div tag - Not Recommended
     // <div className='post'> - Traditional way of styling using css file and targeting the class - Not Recommended
     // Setting the styles of these elements using classes from the CSS Module that we created. Remember to wrap {} around your objects
-    <div className={classes.post}>
+    <li className={classes.post}>
       {/* Passing in the props and their properties to be outputted */}
       <p className={classes.author}>{props.author}</p>
       <p className={classes.text}>{props.body}</p>
-    </div>
+    </li>
   );
 }
 

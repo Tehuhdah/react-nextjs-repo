@@ -18,6 +18,11 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   // React.StrictMode is a wrapper component that checks for potential problems in your application during development.
   // The App component and all children components will get rendered here.
+
+  // UNDERSTANDING THE FLOW
+  // Posts component contains props that is used to return jsx code that display the author and body.
+  // PostsList component returns the Posts component stored inside of a ul.
+  // App component is the root component which will be rendered below.
   <React.StrictMode>
     <App />
   </React.StrictMode>

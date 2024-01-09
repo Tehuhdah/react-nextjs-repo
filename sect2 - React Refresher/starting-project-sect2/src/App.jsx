@@ -3,6 +3,9 @@
 // Importing the Post component to be used inside of App.jsx
 import Post from "./components/Post";
 
+// Importing the PostList component to be used inside of App.jsx
+import PostsList from "./components/PostsList";
+
 // Define a functional component named App.
 // Functional components are JavaScript functions that return React elements.
 function App() {
@@ -13,13 +16,9 @@ function App() {
 
   return (
     <main>
-      {/* Render the Post component with author and body props. */}
-      {/* The Post component will receive these props and render them. */}
-      <Post author="Jhordan" body="React.js is Awesome!"></Post>
-      <Post author="Angelo" body="Check out the full course!"></Post>
-      <Post author="Tejada" body="Its on a crazy discount right now!" />
-      {/* Render the Post component without any props. */}
-      {/* Since no props are passed, the Post component will render with undefined props. */}
+      {/* Render the PostLists component*/}
+      {/* The PostLists component will render all other child components that are in the <PostsList> Component*/}
+      <PostsList />
     </main>
   );
 }
