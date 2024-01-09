@@ -9,7 +9,6 @@ export default function AwesomePage() {
   return (
     // The main HTML element is used to wrap the main content of the document
     <main>
-      // An h1 heading is used for the page title
       <h1>NextJS Is an Awesome Page!</h1>
     </main>
   );
