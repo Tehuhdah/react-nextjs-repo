@@ -17,6 +17,7 @@ import "./index.css";
 // The render method then renders a React element into the root DOM node.
 ReactDOM.createRoot(document.getElementById("root")).render(
   // React.StrictMode is a wrapper component that checks for potential problems in your application during development.
+  // The App component and all children components will get rendered here.
   <React.StrictMode>
     <App />
   </React.StrictMode>
