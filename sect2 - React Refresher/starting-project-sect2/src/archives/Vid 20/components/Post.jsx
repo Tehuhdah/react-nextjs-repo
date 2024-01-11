@@ -1,12 +1,12 @@
 // Section 2, Vid 17: Building a First Custom Component
 
 // Creating a Post component that takes a props argument and returns a jsx code.
-function Post(props) {
+function Post({ author, body }) {
   return (
     <div>
       {/* Passing in the props and their properties to be outputted */}
-      <p>{props.author}</p>
-      <p>{props.body}</p>
+      <p>{author}</p>
+      <p>{body}</p>
     </div>
   );
 }

@@ -11,12 +11,8 @@
             "id": "9840a93f36b25367",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sect2 - React Refresher/Notes/17. Building a First Custom Component..md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sect2 - React Refresher/Notes/17. Building a First Custom Component..md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sect2 - React Refresher/Notes/17. Building a First Custom Component..md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "sect2 - React Refresher/Notes/17. Building a First Custom Component..md"
-              }
+              "state": {}
             }
           }
         ]
@@ -148,34 +140,48 @@
   },
   "active": "9840a93f36b25367",
   "lastOpenFiles": [
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/PostsList.module.css",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/PostsList.jsx",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/Post.module.css",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/Post.jsx",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/NewPost.module.css",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/NewPost.jsx",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/Modal.module.css",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/Modal.jsx",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/MainHeader.module.css",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components/MainHeader.jsx",
-    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 30/components",
-    "sect2 - React Refresher/Notes/20. Passing Data to Components.md",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/main.jsx",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/index.css",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/PostsList.module.css",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/PostsList.jsx",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/Post.module.css",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/Post.jsx",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/NewPost.module.css",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/NewPost.jsx",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/Modal.module.css",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/Modal.jsx",
+    "sect2 - React Refresher/starting-project-sect2/src/archives/Vid 31/components/MainHeader.module.css",
+    "sect2 - React Refresher/Notes/17. Building a First Custom Component..md",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110204344.png",
+    "sect2 - React Refresher/Notes/31. Handling Form Submissions.md",
     "sect2 - React Refresher/Notes/Untitled.md",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110104645.png",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110104543.png",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110104536.png",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110155734.png",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110155443.png",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110155417.png",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110154821.png",
+    "sect2 - React Refresher/Notes/30. Adding Form Buttons.md",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110154443.png",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110153150.png",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110152619.png",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110152531.png",
+    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110152233.png",
+    "sect2 - React Refresher/Notes/29. Adding a Shared Header & More State Management.md",
+    "sect2 - React Refresher/Notes/28. State & Conditional Content.md",
+    "sect2 - React Refresher/Notes/28..md",
+    "sect2 - React Refresher/Notes/27. The Special 'Children' Prop.md",
+    "sect2 - React Refresher/Notes/26. Lifting State Up.md",
+    "sect2 - React Refresher/Notes/22. Exercise & Another Component.md",
+    "sect2 - React Refresher/22. Exercise & Another Component.md",
+    "sect2 - React Refresher/Notes/Attachments/26. Lifting State Up.md",
+    "sect2 - React Refresher/Notes/Attachments/Untitled.md",
+    "sect2 - React Refresher/Notes/25. Working with State.md",
+    "sect2 - React Refresher/Notes/24. Adding Event Listeners.md",
+    "sect2 - React Refresher/Notes/23. Preparing the App For State Management..md",
+    "sect2 - React Refresher/Notes/21. CSS Styling & CSS Modules.md",
+    "sect2 - React Refresher/Notes/20. Passing Data to Components.md",
     "sect2 - React Refresher/Notes/19. Resuing Components.md",
     "sect2 - React Refresher/Notes/18. Outputting Dynamic Values.md",
-    "sect2 - React Refresher/Notes/Attachments/Attachments/Pasted image 20240110104053.png",
     "sect2 - React Refresher/Notes/Attachments/18. Outputting Dynamic Values.md",
-    "sect2 - React Refresher/Notes/Attachments/Untitled.md",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110103726.png",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110103707.png",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110103651.png",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110102240.png",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110102215.png",
-    "sect2 - React Refresher/Notes/Attachments/Pasted image 20240110101817.png",
-    "sect2 - React Refresher/Notes/17. Building a First Custom Component..md",
     "sect2 - React Refresher/Notes/16. Understanding How React Works.md",
     "Untitled.md",
     "sect2 - React Refresher/2024-01-10.md"
