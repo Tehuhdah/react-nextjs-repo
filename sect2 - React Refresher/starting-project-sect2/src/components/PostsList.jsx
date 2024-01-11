@@ -17,6 +17,15 @@ function PostsList({ isPosting, onStopPosting }) {
 
   // This function is called when a new post is added.
   function addPostHandler(postData) {
+    fetch("http://localhost:8080/posts", {
+      method: "POST",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(() => {
+      console.log("New post added!");
+    });
     // It updates the posts state with the new post and the existing posts.
     setPosts((existingPosts) => [postData, ...existingPosts]);
   }
