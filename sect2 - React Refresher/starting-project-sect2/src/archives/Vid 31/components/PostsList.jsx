@@ -1,8 +1,5 @@
 /* Section 2, Vid 22 - Exercise & Another Component */
 
-// Importing the useState hook from react.
-import { useState } from "react";
-
 // Importing the PostList component to be used
 import NewPost from "./NewPost";
 import Post from "./Post";
