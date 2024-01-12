@@ -1,7 +1,12 @@
 // Section 2, Vid 23 - Preparing the App For State Management
 
 // File refacoring.
-// Section 2, Vid 41: Refactoring Route Components & More Nesting
+// Section 2, Vid 41 - Refactoring Route Components & More Nesting
+
+// Section 2, Vid 42 - Linking and Navigating
+
+// Importing the Link component from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 // Importing the useState hook from react.
 import { useState } from "react";
@@ -10,7 +15,7 @@ import { useState } from "react";
 import classes from "./NewPost.module.css";
 import Modal from "../components/Modal";
 
-function NewPost({ onCancel, onAddPost }) {
+function NewPost({ onAddPost }) {
   // The state for the post body and author is defined here.
   const [enteredBody, setEnteredBody] = useState("");
   const [enteredAuthor, setEnteredAuthor] = useState("");
@@ -63,11 +68,11 @@ function NewPost({ onCancel, onAddPost }) {
             onChange={authorChangeHandler}
           />
         </p>
-        {/* The Cancel button has an onClick event that calls the onCancel function when it's clicked. */}
+        {/* The Cancel button, which is now a Link component, navigates to the parent route when clicked. */}
         <p className={classes.actions}>
-          <button type="button" onClick={onCancel}>
+          <Link to=".." type="button">
             Cancel
-          </button>
+          </Link>
           <button type="submit">Submit</button>
         </p>
       </form>
