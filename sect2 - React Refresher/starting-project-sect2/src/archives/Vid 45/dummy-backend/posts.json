@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "body": "Lecture 44 - Submitting data with action()s",
+      "author": "Jhordan",
+      "id": "0.9306535054247791"
+    },
+    {
+      "body": "Lecture 39: Adding Routes Test",
+      "author": "Jhordan",
+      "id": "0.5195736731746452"
+    },
+    { "body": "LECTURE 36 ", "author": "Jhordan", "id": "0.07001195174923147" },
+    {
+      "body": "Look at this Post! It is now saved onto the database and is requested whenever the page is loaded.",
+      "author": "Jhordan",
+      "id": "0.579676953089578"
+    },
+    {
+      "body": "Will this work?",
+      "author": "TESTER",
+      "id": "0.3281603765165575"
+    },
+    {
+      "body": "This course is hopefully very helpful to you!",
+      "author": "Maximilian",
+      "id": "post-1"
+    }
+  ]
+}
