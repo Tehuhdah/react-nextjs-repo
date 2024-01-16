@@ -1,11 +1,20 @@
 // Section 3, Vid 95 - Exercise - Your Solution
 
+// Import the necessary modules and components
 import classes from "./page.module.css";
 import MealsGrid from "@/components/meals/meals-grid";
+// Import the getMeals function from the meals library
+import { getMeals } from "@/lib/meals";
 
 import Link from "next/link";
 
-export default function MealsPage() {
+// Define the MealsPage component
+export default async function MealsPage() {
+  // Call the getMeals function to fetch all meals from the database
+  // The await keyword is used to wait for the Promise returned by getMeals to resolve
+  const meals = await getMeals();
+
+  // The component returns a fragment containing a header and a main section
   return (
     <>
       <header className={classes.header}>
@@ -21,7 +30,9 @@ export default function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid meals={[]} />
+        {/* The MealsGrid component is used to display the meals
+        The meals fetched from the database are passed as a prop */}
+        <MealsGrid meals={meals} />
       </main>
     </>
   );
