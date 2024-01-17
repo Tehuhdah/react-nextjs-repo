@@ -1,6 +1,4 @@
-// Section 3, Vid 115 - Getting Started with the "Share Meal" Form
-
-import classes from "./page.module.css";
+import classes from './page.module.css';
 
 export default function ShareMealPage() {
   return (
@@ -37,7 +35,8 @@ export default function ShareMealPage() {
               id="instructions"
               name="instructions"
               rows="10"
-              required></textarea>
+              required
+            ></textarea>
           </p>
           IMAGE PICKER
           <p className={classes.actions}>
