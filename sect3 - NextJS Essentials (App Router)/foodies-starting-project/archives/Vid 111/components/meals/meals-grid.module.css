@@ -1,0 +1,12 @@
+/* Section 3, Vid 106 - Outputting Meals Data & Images With Unknown Dimensions */
+
+.meals {
+  width: 90%;
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 5rem;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+}

@@ -12,8 +12,5 @@ export async function getMeals() {
   // This line prepares a SQL statement to select all records from the 'meals' table
   // and then executes it to get all the meals from the database.
   // The 'all' method returns an array of all rows in the result set.
-
-  // To simulate an error occuring.
-  // throw new Error("Loading meals failed");
   return db.prepare("SELECT * FROM meals").all();
 }
