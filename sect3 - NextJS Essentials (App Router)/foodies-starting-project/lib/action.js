@@ -3,6 +3,7 @@
 "use server";
 import { redirect } from "next/navigation";
 import { saveMeal } from "./meals";
+import { revalidatePath } from "next/cache";
 
 // Checks if the text is invalid, or if the trimmed text is an empty string.
 function isInvalidText(text) {
@@ -50,6 +51,11 @@ We also have additional validation for the creator_email, and image properties *
   // Call the 'saveMeal' function, which is assumed to save the 'meal' object to a database or some other form of storage
   // This function is awaited because it's likely asynchronous, meaning it returns a Promise
   await saveMeal(meal);
+
+  // Call the 'revalidatePath' function with the string "/meals" as an argument.
+  // It's used to tell the library to re-fetch the data at the specified path ("/meals") and update the local state with the new data.
+  // This is typically done after a mutation (create, update, delete) to ensure the UI is in sync with the server.
+  revalidatePath("/meals");
 
   // Call the 'redirect' function with the path '/meals' as an argument
   // This function is likely responsible for navigating to a different page in the application
