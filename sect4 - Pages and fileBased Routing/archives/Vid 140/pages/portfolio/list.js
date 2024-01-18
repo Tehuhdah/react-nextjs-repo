@@ -9,4 +9,4 @@ function ListPage() {
   );
 }
 
-export default PortfolioPage;
+export default ListPage;
