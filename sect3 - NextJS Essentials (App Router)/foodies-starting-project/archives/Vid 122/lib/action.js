@@ -26,8 +26,8 @@ export async function shareMeal(formData) {
   // This function is awaited because it's likely asynchronous, meaning it returns a Promise
   await saveMeal(meal);
 
-  // Call the 'redirect' function with the path '/' as an argument
+  // Call the 'redirect' function with the path '/meals as an argument
   // This function is likely responsible for navigating to a different page in the application
-  // In this case, it's navigating to the root page ('/')
-  redirect("/");
+  // In this case, it's navigating to the root page ('/meals')
+  redirect("/meals");
 }
