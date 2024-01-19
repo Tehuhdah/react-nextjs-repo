@@ -28,7 +28,7 @@ function ClientsPage() {
             {/* The 'href' prop is set to an object that includes 'pathname' and 'query' properties */}
             {/* 'pathname' is a string that represents the pattern of the URL */}
             {/* 'query' is an object that includes an 'id' property set to the client's id */}
-            {/* This creates a link to the client's page */}
+            {/* This creates a link to the specific client's page */}
             {/* The link text is the client's name */}
             <Link
               href={{
