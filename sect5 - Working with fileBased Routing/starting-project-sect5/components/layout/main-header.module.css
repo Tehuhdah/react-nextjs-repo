@@ -1,3 +1,5 @@
+/*  Section 5, Vid 162 - Adding a General Layout Wrapper Component */
+
 .header {
   width: 100%;
   display: flex;
@@ -11,7 +13,7 @@
 .logo {
   font-size: 1.5rem;
   color: white;
-  font-family: 'Fira', sans-serif;
+  font-family: "Fira", sans-serif;
   height: 100%;
   display: flex;
   justify-content: center;

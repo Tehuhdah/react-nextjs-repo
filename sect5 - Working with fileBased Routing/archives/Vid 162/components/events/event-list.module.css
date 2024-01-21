@@ -1,0 +1,7 @@
+/* Section 5, Vid 158 - Styling Componenets in Next.JS Projects */
+
+.list {
+  width: 90%;
+  max-width: 40rem;
+  margin: 5rem auto;
+}
