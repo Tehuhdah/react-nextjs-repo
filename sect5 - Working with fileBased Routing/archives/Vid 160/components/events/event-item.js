@@ -31,7 +31,8 @@ function EventItem(props) {
   // The component returns a JSX element
   return (
     <li className={classes.item}>
-      {/* Render an 'img' element with the 'src' prop set to the event's 'image' and the 'alt' prop set to the event's 'title' */}
+      {/* Render an 'img' element with the 'src' prop set to the event's 'image' and the 'alt' prop set
+       to the event's 'title' */}
       <img src={"/" + image} alt={title} />
       <div className={classes.content}>
         {/* Render the event's 'title' in an 'h2' element */}
