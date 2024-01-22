@@ -11,6 +11,12 @@ import { Fragment } from "react";
 function ProductDetailPage(props) {
   const { loadedProduct } = props;
 
+  // Check if the 'loadedProduct' prop is not defined
+  // This could be the case if the data is still being fetched, or if an invalid product ID was provided
+  if (!loadedProduct) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <Fragment>
       <h1>{loadedProduct.title}</h1>
@@ -26,7 +32,8 @@ export async function getStaticProps(context) {
   const productId = params.pid;
 
   // Construct the full path to the data file
-  // process.cwd() gives the current working directory, and 'data' and 'dummy-backend.json' are appended to it
+  // process.cwd() gives the current working directory, and 'data' and 'dummy-backend.json'
+  // are appended to it
   const filePath = path.join(process.cwd(), "data", "dummy-backend.json");
 
   // Read the data file asynchronously using Node's fs module
@@ -37,7 +44,8 @@ export async function getStaticProps(context) {
   const data = JSON.parse(jsonData);
 
   // Find the product in the data array that matches the provided product ID
-  // The find method is used to iterate over the products array and return the first product that satisfies the provided testing function
+  // The find method is used to iterate over the products array and return the first product
+  // that satisfies the provided testing function
   const product = data.products.find((product) => product.id === productId);
 
   // Return the found product as a prop to the page component
@@ -53,18 +61,30 @@ export async function getStaticProps(context) {
 // In this case, it's used to generate static pages for each product
 export async function getStaticPaths() {
   return {
-    // The 'paths' property is an array of objects, where each object represents a possible path for this dynamic page
-    // Each object has a 'params' property, which is an object that contains the dynamic parts of the path
-    // In this case, the dynamic part of the path is the product ID (pid), so each object in the 'paths' array has a 'pid' property
-    // The 'params' object with the dynamic parts of the path (like 'pid') will get passed to the getStaticProps function
+    // The 'paths' property is an array of objects, where each object represents a possible
+    // path for this dynamic page
+    // Each object has a 'params' property, which is an object that contains the dynamic
+    // parts of the path
+    // In this case, the dynamic part of the path is the product ID (pid),
+    // so each object in the 'paths' array has a 'pid' property
+    // The 'params' object with the dynamic parts of the path (like 'pid') will get
+    // passed to the getStaticProps function
     paths: [
+      // fallback: true
+      // Most frequest page will be pre-rendered
       { params: { pid: "p1" } }, // Path for the product with ID 'p1'
-      { params: { pid: "p2" } }, // Path for the product with ID 'p2'
-      { params: { pid: "p3" } }, // Path for the product with ID 'p3'
+
+      // These 2 pages will not be pre-rendered but rendered just in time.
+      //   { params: { pid: "p2" } }, // Path for the product with ID 'p2'
+      //   { params: { pid: "p3" } }, // Path for the product with ID 'p3'
     ],
-    // The 'fallback' property determines what happens if a request is made for a path that wasn't returned by getStaticPaths
+    // The 'fallback' property determines what happens if a request is made for a path that wasn't
+    // returned by getStaticPaths
     // If 'fallback' is false, then any paths not returned by getStaticPaths will result in a 404 page
-    fallback: false,
+    // If 'fallback; is true, then even paths that are not listed, can be rendered. (If data is in database.)
+    // If true, they these paths will not be pre-rendered, but rendered just in time.
+    // Alternative: 'blocking' - NextJS will wait for the page to be generated before rendering it.
+    fallback: true,
   };
 }
 
