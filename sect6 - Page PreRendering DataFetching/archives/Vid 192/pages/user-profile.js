@@ -15,6 +15,7 @@ export async function getServerSideProps(context) {
   // 'res' is the HTTP response object
   const { params, req, res } = context;
 
+  // Showcasing that this function only executes when the page is rendered.
   console.log("Server side code");
 
   // The 'props' property is an object that will be passed as props to the page component
