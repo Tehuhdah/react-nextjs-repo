@@ -55,11 +55,6 @@ export async function getStaticProps(context) {
   // that satisfies the provided testing function
   const product = data.products.find((product) => product.id === productId);
 
-  // Ensures that if a product was not found, the user gets redirected to error 404.
-  if (!product) {
-    return { notFound: true };
-  }
-
   // Return the found product as a prop to the page component
   // The 'loadedProduct' prop will contain the product object that was found
   return {
@@ -94,7 +89,7 @@ export async function getStaticPaths() {
     // If 'fallback; is true, then even paths that are not listed, can be rendered. (If data is in database.)
     // If true, they these paths will not be pre-rendered, but rendered just in time.
     // Alternative: 'blocking' - NextJS will wait for the page to be generated before rendering it.
-    fallback: true,
+    fallback: false,
   };
 }
 
