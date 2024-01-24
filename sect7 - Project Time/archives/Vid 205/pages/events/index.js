@@ -12,7 +12,6 @@ import EventList from "../../components/events/event-list";
 import EventsSearch from "../../components/events/events-search";
 import { Fragment } from "react";
 import { useRouter } from "next/router";
-import { decodeFormState } from "next/dist/server/app-render/entry-base";
 
 // Define the AllEventsPage component
 function AllEventsPage(props) {
