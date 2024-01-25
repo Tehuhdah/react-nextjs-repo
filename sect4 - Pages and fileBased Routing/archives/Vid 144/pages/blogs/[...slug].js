@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 // This component will be rendered whenever the user types anything after blogs/ no matter the contents of the route.
 // Example: blogs/2020/12 , blogs/projects/2023
 function BlogPostPage() {
-  const router = useRouter(); // clients/max {id: "max" } -> Returns the concrete value of the path
+  const router = useRouter(); // blogs/2020/12 {slug: [2020, 2012] } -> Returns the concrete value of the path in an array because of the spread operator.
 
   console.log(router.query);
   return (
