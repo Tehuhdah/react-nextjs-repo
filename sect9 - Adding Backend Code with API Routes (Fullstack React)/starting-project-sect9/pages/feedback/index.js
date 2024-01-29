@@ -1,7 +1,7 @@
 // Section 9 - Vid 230 - Using API Routes for Pre-Rendering Pages
 
 // Importing helper functions from feedback.js
-import { buildFeedbackPath, extractFeedback } from "../api/feedback";
+import { buildFeedbackPath, extractFeedback } from "../api/feedback/index";
 
 // Importing Fragment and useState from react
 import { Fragment, useState } from "react";
@@ -14,7 +14,7 @@ function FeedbackPage(props) {
   // Function to load feedback data when a button is clicked
   function loadFeedbackHandler(id) {
     // Fetch request to the API route with the given ID
-    fetch(`/api/${id}`)
+    fetch(`/api/feedback/${id}`)
       .then((response) => response.json()) // Parsing the response as JSON
       .then((data) => {
         console.log("Response data:", data); // Logging the response data

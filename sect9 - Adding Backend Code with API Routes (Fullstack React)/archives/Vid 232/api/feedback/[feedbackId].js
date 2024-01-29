@@ -1,6 +1,6 @@
 // Section 9, Vid 231 - Creating & Using Dynamic API Routes
 
-import { buildFeedbackPath, extractFeedback } from "./feedback";
+import { buildFeedbackPath, extractFeedback } from ".";
 
 // This is a handler function for a Next.js API route
 function handler(req, res) {
