@@ -5,13 +5,13 @@ import fs from "fs";
 // Import the 'path' module to work with file and directory paths.
 import path from "path";
 
-function buildFeedbackPath() {
+export function buildFeedbackPath() {
   // Define the path to the feedback file.
 
   return path.join(process.cwd(), "data", "feedback.json");
 }
 
-function extractFeedback(filePath) {
+export function extractFeedback(filePath) {
   // Read the file data synchronously.
   const fileData = fs.readFileSync(filePath);
   // Parse the file data as JSON.
