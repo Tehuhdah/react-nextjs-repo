@@ -15,15 +15,19 @@ async function handler(req, res) {
       return;
     }
 
+    // Connect to the MongoDB client at the provided connection string
     const client = await MongoClient.connect(
       "mongodb+srv://jhordantej:8QtbVYirsdPEO90R@cluster0.i151c5l.mongodb.net/"
     );
-    const db = client.db("newsletter");
 
-    await db.collection("emails").insertOne({ email: userEmail });
+    // Access the 'newsletter' database
+    const db = client.db("events");
 
+    // Insert a new document into the 'emails' collection. The document contains the user's email
+    await db.collection("newsletter").insertOne({ email: userEmail });
+
+    // Close the connection to the MongoDB client
     client.close();
-
     // Logging the email to the console
     console.log(userEmail);
     // Sending a 201 response with a success message
