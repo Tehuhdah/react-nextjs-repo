@@ -10,7 +10,7 @@ async function handler(req, res) {
   const eventId = req.query.eventId;
 
   const client = await MongoClient.connect(
-    "mongodb+srv://jhordantej:8QtbVYirsdPEO90R@cluster0.i151c5l.mongodb.net/"
+    "mongodb+srv://jhordantej:Jho@cluster0.i151c5l.mongodb.net/"
   );
 
   // Checking if the request method is POST
