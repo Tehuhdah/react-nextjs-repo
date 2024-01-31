@@ -1,25 +1,6 @@
 // Section 10, Vid 237 - Adding a Newsletter Route
 
-// Importing MongoClient from the 'mongodb' package
-import { MongoClient } from "mongodb";
-
-// Function to connect to the MongoDB database
-async function connectDatabase() {
-  // Connect to the MongoDB client at the provided connection string
-  const client = await MongoClient.connect(
-    "mongodb+srv://jhordantej:Jho@cluster0.i151c5l.mongodb.net/"
-  );
-  // Return the connected client object
-  return client;
-}
-
-// Function to insert a document into the 'emails' collection in the 'newsletter' database
-async function insertDocument(client, document) {
-  // Access the 'events' database
-  const db = client.db("events");
-  // Insert a new document into the 'newsletter' collection. The document contains the user's email
-  await db.collection("newsletter").insertOne(document);
-}
+import { connectDatabase, insertDocument } from "../../helpers/db-util";
 
 // The main handler function for the API route
 async function handler(req, res) {
@@ -36,6 +17,8 @@ async function handler(req, res) {
     }
 
     let client;
+    let collection = "newsletter";
+    let database = "events";
 
     try {
       // Try to connect to the MongoDB database
@@ -48,7 +31,7 @@ async function handler(req, res) {
 
     try {
       // Try to insert the user's email into the database
-      await insertDocument(client, { email: userEmail });
+      await insertDocument(client, collection, { email: userEmail }, database);
     } catch (error) {
       // If inserting the email fails, send a 500 response with an error message
       res.status(500).json({ message: "Insert data failed!" });
