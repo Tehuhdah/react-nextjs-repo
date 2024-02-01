@@ -22,6 +22,7 @@ export async function insertDocument(client, collection, document, database) {
   return result;
 }
 
+// Function to retrieve all document from a collection in the 'events' database
 export async function getAllDocuments(client, collection, database, sort) {
   // Connect to the database
   const db = client.db(database);
