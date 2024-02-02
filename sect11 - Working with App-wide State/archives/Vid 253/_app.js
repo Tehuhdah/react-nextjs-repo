@@ -11,9 +11,7 @@ import Head from "next/head";
 import Layout from "../components/layout/layout";
 
 import Notification from "../components/ui/notification";
-import NotificationContext, {
-  NotificationContextProvider,
-} from "../store/notification-context";
+import NotificationContext from "../store/notification-context";
 
 // Import the global styles
 import "../styles/globals.css";
@@ -24,7 +22,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     // Using the NotificationContext Provider to allow all child components to access the Notification context
-    <NotificationContextProvider>
+    <NotificationContext>
       {/* The Layout component is a wrapper for the main content of each page */}
       <Layout>
         {/* The Head component is used to set the HTML head tags for all pages */}
@@ -44,7 +42,7 @@ function MyApp({ Component, pageProps }) {
         {/* The Notification component is used to display notifications to the user */}
         <Notification title="Test" message="This is a test." status="pending" />
       </Layout>
-    </NotificationContextProvider>
+    </NotificationContext>
   );
 }
 
